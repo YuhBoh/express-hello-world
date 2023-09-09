@@ -40,3 +40,11 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
 });
+
+app.get("/", (req, res) => res.type("html").send(html));
+
+app.get("/meow", (req, res) => {
+  return JSON.stringify({
+    hello: "world",
+  });
+});
