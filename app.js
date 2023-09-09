@@ -4,8 +4,6 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-const passport = require("./strategies/user.strategy");
-
 // Route includes
 const userRouter = require("./routes/user.router");
 const videosRouter = require("./routes/videos.router");
