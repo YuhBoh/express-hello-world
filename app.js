@@ -34,7 +34,7 @@ app.use("/api/search", searchRouter);
 app.use(express.static("build"));
 
 // App Set //
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3030;
 
 /** Listen * */
 app.listen(PORT, () => {
@@ -42,8 +42,5 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => res.type("html").send(html));
-app.get("/meow", (req, res) => {
-  return JSON.stringify({
-    hello: "world",
-  });
-});
+
+app.get("/meow", (req, res) => res.json({ hello: "world", }));
