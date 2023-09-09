@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-const sessionMiddleware = require("./modules/session-middleware");
 const passport = require("./strategies/user.strategy");
 
 // Route includes
