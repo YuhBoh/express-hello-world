@@ -42,7 +42,6 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => res.type("html").send(html));
-
 app.get("/meow", (req, res) => {
   return JSON.stringify({
     hello: "world",
